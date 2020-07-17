@@ -5,22 +5,81 @@ You can import here instead of providing a link tag to source in html file
 
 :root{
     --font-color: #fff;
-    --background-color: #33adff;
 }
 
 body{
     font-family: 'Mulish', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 7% 0;
     background: linear-gradient(to bottom right, #36D1DC, #5B86E5);
+    font-size: 1.0em;
 }
 
-#title, #description{
+#title, #description{   
  text-align: center;
  color: var(--font-color);
 }
 
 #survey-form{
-    width: 80%;
-    background: var(--background-color);
+    width: 60%;
+    color: var(--font-color);
+    display: inline-block;
+    text-align: left;
+    margin: auto 20%;
 }
+
+.survey-element{
+    margin-bottom: 5px;
+}
+
+label{
+    display: block;
+    margin: 20px 0px 7px 0px;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+#name-label{
+    margin-top: 0;
+}
+
+#name, #email, #age, #dropdown{
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+input[type = "checkbox"], input[type = "radio"]{
+    width: 1.3em;
+    height: 1.3em;
+    margin: 5px 10px 10px 0px;
+}
+
+.comment-box{
+    margin-top: 30px;
+    padding: 0;
+}
+
+textarea{
+    margin: 0;
+    padding: 7px;
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.1em;
+}
+
+#submit{
+    margin: 4% 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #99ff99;
+    color: #fff;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+

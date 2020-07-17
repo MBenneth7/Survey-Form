@@ -1,7 +1,8 @@
 <html>
     <head>
+        <title>Survey Form</title>
         <link href = "./style.css" type = "text/css" rel = "stylesheet">
-        <link <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1 id = "title">Coding Survey</h1>
@@ -10,55 +11,68 @@
         </p>
         <form id = "survey-form">
             
-            <label id = "name-label" for = "name"> Name </label>
-            <input type = "text" id = "name" name = "name" placeholder = "Enter your full name">
+            <div class = "survey-element">
+                <label id = "name-label" for = "name"> Name </label>
+                <input type = "text" id = "name" name = "name" placeholder = "Enter your full name" required>
+            </div>
 
-            <label id = "email-label" for = "email">E-mail </label>
-            <input type = "email" id = "email" name = "email" placeholder = "Enter your E-mail">
+            <div class = "survey-element">
+                <label id = "email-label" for = "email" required>E-mail </label>
+                <input type = "email" id = "email" name = "email" placeholder = "Enter your E-mail"
+            </div>
 
-            <label id = "number-label" for = "age">Age </label>
-            <input type = "number" id = "age" name = "age" min = 18 max = 99 placeholder = "Age">
+            <div class = "survey-element">
+                <label id = "number-label" for = "age">Age (optional) </label>
+                <input type = "number" id = "age" name = "age" min = 13 max = 150 placeholder = "Age"    
+            </div>
 
-            <label for = "occupation">Which option best describes your current role?</label>
-            <select id = "dropdown" name = "occupation">
-                <option value = "noOccupation">--Current Occupation--</option>
-                <option value = "partTimeStudent">Part-Time Student</option>
-                <option value = "fullTimeStudent">Full-Time Student</option>
-                <option value = "partTimeWorker">Part-Time Worker</option>
-                <option value = "fullTimeWorker">Full-Time Worker</option>
-            </select>
+            <div class = "survey-element">
+                <label for = "occupation">Which option best describes your current role?</label>
+                <select id = "dropdown" name = "occupation">
+                    <option value = "noOccupation">--Current Occupation--</option>
+                    <option value = "partTimeStudent">Part-Time Student</option>
+                    <option value = "fullTimeStudent">Full-Time Student</option>
+                    <option value = "partTimeWorker">Part-Time Worker</option>
+                    <option value = "fullTimeWorker">Full-Time Worker</option>
+                </select>   
+            </div>
+
+            <div class = "survey-element">
+                <label for = "choice">Would you reccomend our services to a friend?</label>
+                <input type = "radio" name = "choice" value = "Yes"> Yes <br>
+                <input type = "radio" name = "choice" value = "Maybe"> Maybe <br>
+                <input type = "radio" name = "choice" value = "No"> No <br>
+            </div>
+
+            <div class = "survey-element">
+                <label for = "career">What kind of Developer do you want to be?</label>
+                <select id = "dropdown" name = "career">
+                    <option value = "noneSelected">--Type of Developer--</option>
+                    <option value = "frontEnd">Front-End Developer</option>
+                    <option value = "backEnd">Back-End Developer</option>
+                    <option value = "fullStack">Full-Stack Developer</option>        
+                </select>
+            </div>
+                
+            <div class = "survey-element">
+                <label for = "skills">What skills do you possess? (Check all that apply)</label>
+                <input type = "checkbox" name = "skills" value = "HTML"> HTML <br>
+                <input type = "checkbox" name = "skills" value = "CSS"> CSS <br>
+                <input type = "checkbox" name = "skills" value = "Javascript"> Javascript <br>
+                <input type = "checkbox" name = "skills" value = "Ruby"> Ruby <br>
+                <input type = "checkbox" name = "skills" value = "Git"> Git <br>
+                <input type = "checkbox" name = "skills" value = "Python"> Python <br>
+                <input type = "checkbox" name = "skills" value = "Bootstrap"> BootStrap <br>   
+            </div>    
             
-            <label for = "choice">Would you reccomend our services to a friend?</label>
-            <input type = "radio" name = "choice" value = "Yes"> Yes
-            <input type = "radio" name = "choice" value = "Maybe"> Maybe
-            <input type = "radio" name = "choice" value = "No"> No
+            <div class = "survey-element">
+                <label class = "comment-box" for = "comments">Any Comments or Suggestions?</label>
+                <textarea rows = 7 cols = 30 placeholder="Enter your comments here..."></textarea>
+            </div>
 
-            <label for = "career">What kind of Developer do you want to be?</label>
-            <select id = "career-dropdown" name = "career">
-                <option value = "noneSelected">--Type of Developer--</option>
-                <option value = "frontEnd">Front-End Developer</option>
-                <option value = "backEnd">Back-End Developer</option>
-                <option value = "fullStack">Full-Stack Developer</option>
-            </select>
+            <input id = "submit" type = "submit" value = "Submit">   
+           
 
-            <label for = "skills">What skills do you possess? (Check all that apply)</label>
-            <input type = "checkbox" name = "skills" value = "HTML"> HTML
-            <input type = "checkbox" name = "skills" value = "CSS"> CSS
-            <input type = "checkbox" name = "skills" value = "Javascript"> Javascript
-            <input type = "checkbox" name = "skills" value = "Ruby"> Ruby
-            <input type = "checkbox" name = "skills" value = "Git"> Git
-            <input type = "checkbox" name = "skills" value = "Python"> Python
-            <input type = "checkbox" name = "skills" value = "Bootstrap"> BootStrap   
-
-            <label for = "comments">Any Comments or Suggestions?</label>
-            <textarea rows = 10 cols = 30></textarea>
-
-
-
-
-
-
-            <input type = "submit" value = "Submit">
 
 
         </form>
